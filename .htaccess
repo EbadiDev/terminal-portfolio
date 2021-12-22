@@ -1,0 +1,5 @@
+### Force Https, delete this if want to use Http
+
+RewriteEngine On
+RewriteCond %{HTTPS}  !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
